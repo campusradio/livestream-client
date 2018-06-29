@@ -13,7 +13,7 @@ window.onkeydown = function (e) {
 class Player {
 	constructor() {
 		this.toggleElm = document.querySelector('.toggle').classList
-		this.playing = false
+		this.playing = true
 		this.available = false
 	}
 
@@ -50,7 +50,7 @@ class Player {
 
 		if (!offline) {
 			this.playing = false
-			Player.setText('Paused')
+			Player.setText('Ready')
 		} else Player.setText('Offline')
 		Amplitude.pause()
 		this.toggleElm.remove('pause')
@@ -84,4 +84,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	setInterval(check, 3000)
 	check()
 	resize()
+	player.pause()
 })
