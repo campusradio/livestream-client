@@ -13,7 +13,7 @@ window.onkeydown = function (e) {
 class Player {
 	constructor() {
 		this.toggleElm = document.querySelector('.toggle').classList
-		this.playing = true
+		this.playing = false
 		this.available = false
 	}
 
