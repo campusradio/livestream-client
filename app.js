@@ -31,7 +31,10 @@ class Player {
 			if (this.available) return
 			this.available = true
 			this.toggleElm.remove('error')
-			if (!this.playing) return
+			if (!this.playing) {
+				Player.setText('Ready')
+				return
+			}
 		} else if (this.playing || !this.available) return
 
 		this.playing = true
@@ -45,13 +48,14 @@ class Player {
 		if (offline) {
 			this.available = false
 			this.toggleElm.add('error')
+			Player.setText('Offline')
 		}
 		if (!this.playing) return
 
 		if (!offline) {
 			this.playing = false
 			Player.setText('Ready')
-		} else Player.setText('Offline')
+		}
 		Amplitude.pause()
 		this.toggleElm.remove('pause')
 		this.toggleElm.add('play')
