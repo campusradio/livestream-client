@@ -1,0 +1,105 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+hr {
+	border: 1px inset hsla(0, 0%, 13%, 1);
+	margin: 1em 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+html,
+body,
+.app {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	/* font-family: 'Courier New', Courier, monospace; */
+	font-family: 'Lato';
+	color: hsl(0, 0%, 13%);
+}
+
+.app {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: hsl(103, 94%, 47%);
+	padding: 1em;
+}
+
+.player {
+	width: 20em;
+	max-width: 100%;
+}
+
+.logo-wrapper {
+	max-width: 100%;
+	/* height: 20em; */
+	margin-bottom: 2em;
+}
+
+.logo {
+	background-image: url('res/logo.png');
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+.content {
+	padding: 1em;
+	background: hsl(0, 0%, 95%);
+	box-shadow: 0 0.3em 1em -0.2em hsla(0, 0%, 0%, .5);
+	width: 10em;
+	margin: auto;
+	border-radius: 8em;
+	overflow: hidden;
+}
+
+.content .controls {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.content .controls .toggle {
+	height: 2em;
+	width: 2em;
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	transition: all 200ms ease;
+	border-radius: 2em;
+}
+
+.content .controls .toggle.play {
+	background-image: url('res/play.svg');
+}
+
+.content .controls .toggle.pause {
+	background-image: url('res/pause.svg');
+}
+
+.content .controls .toggle.error {
+	cursor: wait;
+	background-image: url('res/error.svg') !important;
+	background-color: transparent !important;
+}
+
+.content .controls .status {
+	text-transform: uppercase;
+	padding-right: .5em;
+}
