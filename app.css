@@ -4,16 +4,6 @@
 	box-sizing: border-box;
 }
 
-hr {
-	border: 1px inset hsla(0, 0%, 13%, 1);
-	margin: 1em 0;
-}
-
-a {
-	color: inherit;
-	text-decoration: inherit;
-}
-
 a:hover {
 	text-decoration: underline;
 }
@@ -26,14 +16,14 @@ body,
 	overflow: hidden;
 	/* font-family: 'Courier New', Courier, monospace; */
 	font-family: 'Lato';
-	color: hsl(0, 0%, 13%);
+	color: #1e1e1e;
 }
 
 .app {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: hsl(103, 94%, 47%);
+	background: #b9d44f;
 	padding: 1em;
 }
 
